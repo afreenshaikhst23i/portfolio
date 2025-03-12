@@ -1,0 +1,47 @@
+To run css:
+npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch
+-----------------------------------------------------------------------------------------------------------------
+
+The Quotes:
+- Simplicity is the soul of efficiency - Austin Freeman
+- A website is never done. It's always a work in progress
+- Every great developer you know got there by solving problems they were unqualified to solve until they actually did it.
+- The only way to do great work is to love what you do - Steve Jobs
+
+-----------------------------------------------------------------------------------------------------------------
+To-Do List
+- Add certification section.
+- Add scroll skip to main or skip to footer button.
+- Make wesbite accessible.
+- make smooth page scroll when click on anchor
+- progressbar animation - https://www.youtube.com/watch?v=HLJ96uuYCMM&ab_channel=LearnDesign
+
+-----------------------------------------------------------------------------------------------------------------
+Templates:
+- https://technext.github.io/clark/index.html
+- https://www.paulawrzecionowska.com/
+- https://themewagon.github.io/mark/
+- https://technext.github.io/profile/   
+- https://graphicburger.com/preview/html-templates/Personal/index.html
+- https://preview.themeforest.net/item/inbio-one-page-personal-portfolio-template/full_screen_preview/33188244?_ga=2.88403864.248853679.1640051566-1973834915.1632625071
+- https://technext.github.io/kards/
+- https://dribbble.com/shots/22952976-Portfolio-Website-Design-and-Development
+- https://preview.themeforest.net/item/nabhan-personal-portfolio-html-template/full_screen_preview/55396145?_ga=2.161774783.2079067247.1732275849-839951408.1725388342
+
+
+
+
+- https://www.me.toinfinite.dev/
+- https://github.com/emmabostian/developer-portfolios
+-----------------------------------------------------------------------------------------------------------------
+
+#31333b
+#34353a
+#3d3e42
+#ffbd39
+#826AFF
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+Let me introduce myself.

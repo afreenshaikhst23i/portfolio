@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-black text-white relative scroll-smooth relative;
+}
+.wave {
+    @apply absolute bottom-0 w-full z-[8];
+}
+main, footer {
+    @apply relative z-10;
+}
+.container {
+    @apply sm:max-w-[100%] md:max-w-[100%] lg:max-w-[100%] xl:max-w-[1180px] 2xl:max-w-[1312px] 3xl:max-w-[1384px];
+}
+.primary-btn {
+    @apply bg-primary text-white text-base border border-primary rounded-md py-2 px-4 
+    inline-block font-semibold shadow-lg;
+}
+
+.scroll-to-top-btn {
+    @apply bg-primary fixed rounded-full right-5 bottom-10 block z-20;
+}
+
+.header-main {
+    .nav-main {
+        @apply py-8 lg:py-16 flex flex-wrap justify-between items-center;
+    }
+    .logo-main {
+        @apply flex items-center;
+        .logo {
+            @apply self-center text-4xl font-semibold whitespace-nowrap inline-block;
+            font-family: "sacramento", cursive;
+        }
+    }
+    .toggle-menu {
+        @apply lg:order-2 inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 ;
+    }
+    .menu-main {
+        @apply hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1;
+    }
+    .menu-list {
+        @apply flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 items-center;
+        .menu-item {
+            @apply block py-2 pr-4 pl-3 text-white lg:p-0 text-lg scroll-smooth;
+        }
+    }
+    .connect-nav .menu-item {
+        @apply bg-primary py-2 px-5 rounded-sm;
+    }
+}
+
+.hero-section {
+    @apply py-8 lg:py-16;
+    .hero-main {
+        @apply flex flex-col lg:flex-row gap-6 lg:gap-8;
+        .hero-text-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center gap-2 lg:gap-4 text-center 
+            lg:text-left items-center lg:items-start;
+            .hey-text {
+                @apply text-primary text-3xl font-bold;
+            }
+            .hero-heading {
+                @apply text-3xl lg:text-6xl font-bold whitespace-nowrap overflow-hidden inline-block;
+                border-right: 2px solid rgba(255,255,255,.75);
+            }
+            .hero-subheading {
+                @apply text-xl lg:text-3xl;
+            }
+        }
+        .hero-img-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center;
+        }
+    }
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 2s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 335px;}
+}
+@media only screen and (max-width: 1023px) {
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 175px;}
+    }
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+
+.connect-link {
+    @apply flex flex-row gap-2 items-center text-lg text-primary;
+}
+.heading-wrapper {
+    @apply relative mb-10 lg:mb-16 text-center;
+    .primary-heading {
+        @apply text-[30px] lg:text-[50px] font-bold;
+    }
+    .primary-heading-shadow {
+        @apply absolute left-1/2 -translate-x-1/2 top-[25px] lg:top-[50px] text-[#ffffff17] 
+        text-[10vw] lg:text-[7vw] xl:text-[100px] font-bold leading-10 w-full;
+    }
+    .primary-subheading {
+        @apply text-xl lg:max-w-[80%] mx-auto text-[#999999] mt-[15px] lg:mt-[40px];
+    }
+}
+
+
+.skills-section {
+    @apply py-8 lg:py-20 text-center;
+    .primary-heading {
+        @apply mb-4;
+    }
+    .skills-wrap {
+        @apply relative;
+        .skill-list {
+            @apply flex flex-col lg:flex-row gap-x-10 gap-y-4 flex-wrap;
+            .skill-item {
+                @apply basis-[calc(50%-20px)];
+            }
+        }
+        .skill-head {
+            @apply flex flex-row justify-between relative;
+            .skill-heading {
+                @apply text-lg font-semibold;
+            }
+            .skill-prcnt {
+                @apply text-lg absolute -translate-x-full;
+            }
+        }
+        .progress-bar {
+            @apply w-full bg-[#1a1a1a] rounded-br-md rounded-tr-md h-2.5 mb-4 dark:bg-[#1a1a1a];
+            .progress {
+                @apply bg-primary h-2.5 rounded-br-md rounded-tr-md dark:bg-primary;
+            }
+        }
+    }
+}
+
+.Projects-section {
+    @apply py-8 lg:py-20 text-center;
+    .primary-heading {
+        @apply mb-4;
+    }
+    .projects-wrap {
+        li {
+            figure {
+                @apply flex flex-col lg:flex-row justify-between items-center relative lg:py-16 lg:px-20
+                before:content-[""] before:border-[10px] before:border-primary before:absolute
+                before:inset-[15%_0] lg:before:inset-[0_20%] before:-z-[1];
+                & img {
+                    @apply w-[70%] lg:w-1/2 h-[200px] lg:h-[300px] object-cover object-top ml-auto;
+                }
+            }
+            figcaption {
+                @apply w-4/5 lg:w-[35%] mb-[50px] lg:mb-0 p-5 text-left bg-black mr-auto;
+                .fig-name {
+                    @apply font-bold text-xl lg:text-4xl;
+                }
+                .fig-text {
+                    @apply text-lg mt-2;
+                }
+                .fig-link {
+                    @apply underline text-primary mt-5 block;
+                }
+            }
+        }
+    }
+    .tns-nav {
+        @apply flex gap-4 justify-center items-center mt-5;
+        button {
+            @apply border-2 border-[#ffffff3d] w-4 h-4 rounded-full;
+        }
+        button.tns-nav-active {
+            @apply bg-primary w-[18px] h-[18px];
+        }
+    }
+}
+
+.about-section {
+    @apply py-8 lg:py-20;
+    .about-main {
+        @apply flex flex-col lg:flex-row gap-6 lg:gap-8;
+        .about-text-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center gap-2 lg:gap-4 text-center lg:text-left;
+            .about-heading {
+                @apply text-lg font-bold text-primary;
+            }
+            table {
+                tr {
+                    td {
+                        @apply first:font-bold py-3 text-lg last:text-gray-400 text-left last:pl-4;
+                    }
+                }
+            }
+        }
+        .about-img-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center;
+        }
+    }
+}
+
+.certificate-section {
+    .certificate-wrap {
+        @apply px-20;
+        .certificate-list {
+            @apply grid grid-cols-4 gap-12;
+            .certificates {
+                @apply relative
+                before:content-[""] before:bg-[url("../images/certificates/ribbon.png")]
+                before:bg-contain before:bg-no-repeat before:block before:w-[60px] before:h-[60px] before:absolute
+                before:-left-[20px] before:-top-[15px];
+                & a {
+                    @apply border-[10px] border-primary block;
+                }
+            }
+        }
+    }
+}
+
+.contact-section {
+    @apply py-8 lg:py-20 text-center;
+    .primary-heading {
+        @apply mb-4;
+    }
+    .contact-wrap {
+        @apply relative flex flex-col lg:flex-row;
+    }
+    .contact-form-wrap {
+        @apply basis-1/2 bg-white px-4 py-6 lg:p-10;
+        .cta-wrapper {
+            @apply text-left;
+        }
+    }
+    .contact-detail-wrap {
+        @apply basis-1/2;
+        & img {
+            @apply w-full h-full object-cover;
+        }
+    }
+}
+
+.basic-lable {
+    @apply block mb-2 text-sm font-medium text-gray-900 text-left;
+}
+.basic-input {
+    @apply bg-white border border-gray-300 text-gray-900 text-sm rounded-sm block w-full p-2.5 h-14;
+}
+.basic-textarea {
+    @apply bg-white border border-gray-300 text-gray-900 text-sm rounded-sm block w-full p-2.5;
+}
+
+.copy-right-section {
+    @apply py-6 lg:py-16;
+    .copy-right-wrap {
+        @apply flex flex-col lg:flex-row gap-6 justify-between items-center;
+    }
+    .social-icon-list {
+        @apply flex flex-row gap-4;
+        .social-icon-link {
+            @apply w-[50px] h-[50px] flex justify-center items-center bg-[#ffffff1a] rounded-full
+            hover:bg-[#ffffff45];
+        }
+    }
+    & p {
+        @apply text-base text-center;
+    }
+}
+
+/* .fix-bg-quote {
+    background-image: url("../images/black-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    @apply px-4 py-40 lg:p-40;
+    .quote-text {
+        @apply text-4xl text-center;
+    }
+    .quote-name {
+        @apply text-lg text-center block mt-4;
+    }
+} */
