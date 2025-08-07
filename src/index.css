@@ -7,6 +7,7 @@
     --font-body: Figtree, ui-sans-serif, system-ui;
 
     --color-primary: #2D3A50;
+    --color-secondary: #999999;
 
     --breakpoint-sm: 40rem; 
     --breakpoint-md: 48rem; 
@@ -86,7 +87,7 @@ main, footer {
             @apply text-lg lg:text-xl font-semibold; 
         }
         .logo-description {
-            @apply text-base lg:text-lg text-[#999999] mt-4;
+            @apply text-base lg:text-lg text-secondary mt-4;
         }
     }
     .logo-main {
@@ -170,7 +171,7 @@ main, footer {
         text-[10vw] lg:text-[7vw] xl:text-[70px] font-bold leading-10 w-full;
     }
     .primary-subheading {
-        @apply text-xl text-[#999999] mt-[15px] lg:mt-[40px];
+        @apply text-xl text-secondary mt-[15px] lg:mt-[40px];
     }
 }
 
@@ -188,7 +189,7 @@ main, footer {
             @apply text-left uppercase text-xl mb-4;
         }
         .skills-list {
-            @apply flex flex-wrap grow gap-6 lg:gap-12 text-[#999999]; 
+            @apply flex flex-wrap grow gap-6 lg:gap-12 text-secondary; 
             div {
                 @apply flex flex-col items-center gap-1; 
                 & img {
@@ -205,36 +206,31 @@ main, footer {
         @apply mb-4;
     }
     .projects-wrap {
+        .projects-slider {
+            @apply flex flex-col gap-36;
+        }
         li {
             figure {
-                @apply flex flex-col lg:flex-row justify-between items-center relative lg:py-16
+                @apply flex flex-col items-center relative py-10
                 before:content-[""] before:border-[10px] before:border-primary before:absolute
-                before:inset-[15%_0] lg:before:inset-[0_20%] before:-z-[1];
-                & img {
-                    @apply w-[70%] lg:w-1/2 h-[200px] lg:h-[300px] object-cover object-top ml-auto;
+                before:inset-[0_10%] before:-z-[1];
+                .project-thumb {
+                    @apply w-full object-contain object-top shadow-[0_0_10px_0_#2d3a50];
                 }
             }
             figcaption {
-                @apply w-4/5 lg:w-[35%] mb-[50px] lg:mb-0 p-5 text-left bg-[#121212] mr-auto;
+                @apply absolute -bottom-[50px] w-[70%] p-4 text-left bg-[#0f172a] mx-auto rounded-sm 
+                shadow-[0_0_10px_0_#2d3a50];
                 .fig-name {
-                    @apply font-bold text-xl lg:text-4xl;
+                    @apply font-bold text-2xl;
                 }
                 .fig-text {
-                    @apply text-lg mt-2;
+                    @apply mt-2;
                 }
                 .fig-link {
-                    @apply underline text-white mt-5 block;
+                    @apply underline text-white mt-4 block;
                 }
             }
-        }
-    }
-    .tns-nav {
-        @apply flex gap-4 justify-center items-center mt-5;
-        button {
-            @apply border-2 border-[#ffffff3d] w-4 h-4 rounded-full;
-        }
-        button.tns-nav-active {
-            @apply bg-primary w-[18px] h-[18px];
         }
     }
 }
@@ -270,7 +266,7 @@ main, footer {
 
 .footer-section {
     .copyright-text {
-        @apply text-[#999999] pt-8 pb-20 lg:pt-12 font-medium;
+        @apply text-secondary pt-8 pb-20 lg:pt-12 font-medium;
     }
 }
 
