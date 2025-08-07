@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url(/src/assets/fonts/sacramento.css);
+@import "tailwindcss";
+
+@theme {
+    --font-sacramento: sacramento, cursive;
+    --font-body: Figtree, ui-sans-serif, system-ui;
+
+    --color-primary: #2D3A50;
+
+    --breakpoint-sm: 40rem; 
+    --breakpoint-md: 48rem; 
+    --breakpoint-lg: 64rem; 
+    --breakpoint-xl: 80rem; 
+    --breakpoint-2xl: 90rem; 
+    --breakpoint-3xl: 93.5rem; 
+}
+
+@utility container {
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-inline: auto;
+
+  @media (width >= theme(--breakpoint-sm)) {
+    max-width: 100%;
+  }
+  @media (width >= theme(--breakpoint-md)) {
+    max-width: 100%;
+  }
+  @media (width >= theme(--breakpoint-lg)) {
+    max-width: 100%;
+  }
+  @media (width >= theme(--breakpoint-xl)) {
+    max-width: 73.75rem;
+  }
+  @media (width >= theme(--breakpoint-2xl)) {
+    max-width: 82rem;
+  }
+  @media (width >= theme(--breakpoint-3xl)) {
+    max-width: 86.5rem;
+  }
+}
+
+html {
+    @apply scroll-smooth transition-all duration-300;
+}
+
+body {
+    @apply bg-[#0f172a] text-white relative scroll-smooth font-body font-[300];
+}
+.wave {
+    @apply absolute bottom-0 w-full z-[8];
+}
+main, footer {
+    @apply relative z-10;
+}
+
+.primary-btn {
+    @apply bg-primary text-white text-base border border-primary rounded-md py-2 px-4 
+    inline-block font-semibold shadow-lg;
+}
+
+.link {
+    @apply text-white text-lg font-semibold flex flex-row gap-1 items-center;
+    & svg {
+        @apply w-5 h-5 translate-y-[2px] transition-all duration-300;
+    }
+}
+.link:hover svg  {
+    @apply -translate-y-[2px];
+}
+
+.page-wrapper {
+    @apply lg:flex lg:justify-between lg:gap-16 container mx-auto relative z-10;
+}
+
+.header-main {
+    @apply lg:w-[45%] lg:sticky lg:top-0 lg:left-0 lg:h-[100vh] py-8 lg:py-20
+    flex flex-col justify-between;
+    .nav-wrapper {
+        @apply flex flex-col gap-10;
+    }
+    .logo-name-wrapper {
+        .logo-subtitle {
+            @apply text-lg lg:text-xl font-semibold; 
+        }
+        .logo-description {
+            @apply text-base lg:text-lg text-[#999999] mt-4;
+        }
+    }
+    .logo-main {
+        @apply flex items-center;
+        .logo {
+            @apply self-center text-[55px] font-semibold whitespace-nowrap inline-block text-white font-sacramento;
+        }
+    }
+    .toggle-menu {
+        @apply lg:order-2 inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 ;
+    }
+    .menu-main {
+        @apply hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1;
+    }
+    .menu-list {
+        @apply flex flex-col mt-4 font-medium gap-4;
+        .menu-item {
+            @apply flex flex-row gap-3 items-center py-2 pr-4 pl-3 text-white lg:p-0 text-sm
+            opacity-40 scroll-smooth uppercase font-bold tracking-[1px];
+            .nav-indicator {
+                @apply inline-block h-[1px] w-8 bg-white transition-all duration-400;
+            }
+            .nav-text {
+                @apply block transition-all duration-400;
+            }
+        }
+        .menu-item.active, .menu-item:hover {
+            @apply opacity-100;
+        }
+        .menu-item.active .nav-indicator, .menu-item:hover .nav-indicator {
+            @apply w-20;
+        }
+    }
+}
+
+.social-icon-list {
+    @apply flex flex-row gap-6 mt-8;
+    .social-icon-link {
+        @apply w-8 h-8 flex justify-center items-center bg-gray-400 rounded-md p-[2px]
+        hover:bg-gray-300;
+    }
+}
+
+.main-content {
+    @apply lg:w-[55%];
+    section {
+        @apply py-8 lg:py-20;
+    }
+}
+
+.hero-section {
+    .hero-main {
+        @apply flex flex-col lg:flex-row gap-6 lg:gap-8;
+        .hero-text-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center gap-2 lg:gap-4 text-center 
+            lg:text-left items-center lg:items-start;
+            .hey-text {
+                @apply text-primary text-3xl font-bold;
+            }
+            .hero-heading {
+                @apply text-3xl lg:text-6xl font-bold whitespace-nowrap overflow-hidden inline-block;
+                border-right: 2px solid rgba(255,255,255,.75);
+            }
+            .hero-subheading {
+                @apply text-xl lg:text-3xl;
+            }
+        }
+        .hero-img-wrap {
+            @apply basis-full lg:basis-[50%] grow flex flex-col justify-center;
+        }
+    }
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 2s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 335px;}
+}
+@media only screen and (max-width: 1023px) {
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 175px;}
+    }
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+}
+
+
+.connect-link {
+    @apply flex flex-row gap-2 items-center text-lg text-primary;
+}
+.heading-wrapper {
+    @apply relative mb-10 lg:mb-14 text-left;
+    .primary-heading {
+        @apply text-[30px] lg:text-[45px] font-bold;
+    }
+    .primary-heading-shadow {
+        @apply absolute left-1/2 -translate-x-1/2 top-[25px] lg:top-[40px] text-[#ffffff17] 
+        text-[10vw] lg:text-[7vw] xl:text-[70px] font-bold leading-10 w-full;
+    }
+    .primary-subheading {
+        @apply text-xl text-[#999999] mt-[15px] lg:mt-[40px];
+    }
+}
+
+
+.skills-section {
+    @apply text-center;
+    .primary-heading {
+        @apply mb-4;
+    }
+    .skills-wrap {
+        @apply relative flex flex-col gap-10 lg:gap-12;
+        .skills-grid {
+            @apply flex flex-col; 
+        }
+        .skills-header {
+            @apply text-left uppercase text-xl mb-4;
+        }
+        .skills-list {
+            @apply flex flex-wrap grow gap-6 lg:gap-12 text-[#999999]; 
+            div {
+                @apply flex flex-col items-center gap-1; 
+                & img {
+                    @apply w-12 h-12;
+                }
+            }
+        }
+    }
+}
+
+.Projects-section {
+    @apply text-center;
+    .primary-heading {
+        @apply mb-4;
+    }
+    .projects-wrap {
+        li {
+            figure {
+                @apply flex flex-col lg:flex-row justify-between items-center relative lg:py-16
+                before:content-[""] before:border-[10px] before:border-primary before:absolute
+                before:inset-[15%_0] lg:before:inset-[0_20%] before:-z-[1];
+                & img {
+                    @apply w-[70%] lg:w-1/2 h-[200px] lg:h-[300px] object-cover object-top ml-auto;
+                }
+            }
+            figcaption {
+                @apply w-4/5 lg:w-[35%] mb-[50px] lg:mb-0 p-5 text-left bg-[#121212] mr-auto;
+                .fig-name {
+                    @apply font-bold text-xl lg:text-4xl;
+                }
+                .fig-text {
+                    @apply text-lg mt-2;
+                }
+                .fig-link {
+                    @apply underline text-white mt-5 block;
+                }
+            }
+        }
+    }
+    .tns-nav {
+        @apply flex gap-4 justify-center items-center mt-5;
+        button {
+            @apply border-2 border-[#ffffff3d] w-4 h-4 rounded-full;
+        }
+        button.tns-nav-active {
+            @apply bg-primary w-[18px] h-[18px];
+        }
+    }
+}
+
+.about-section {
+    .about-main {
+        @apply text-white text-base;
+    }
+}
+
+.certificate-section {
+    .certificate-wrap {
+        .certificate-list {
+            @apply flex flex-col gap-4;
+            .certificates {
+                & a {
+                    @apply flex flex-row gap-4 items-center p-4 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,.1)]
+                    hover:bg-[rgb(36,43,55,0.5)] hover:rounded-md transition-all duration-300;
+                }
+                & p {
+                    @apply transition-all duration-300;
+                }
+                & img {
+                    @apply border-[2px] border-primary block w-[140px] shrink-0 rounded;
+                }
+            }
+        }
+    }
+}
+
+.contact-section {
+    .primary-heading {
+        @apply mb-4;
+    }
+    .contact-detail-wrap {
+        @apply basis-1/2;
+        & img {
+            @apply w-full h-full object-cover;
+        }
+    }
+}
+
+.basic-lable {
+    @apply block mb-2 text-sm font-medium text-white text-left;
+}
+.basic-input {
+    @apply bg-transparent border border-gray-300 text-white text-sm rounded-sm block w-full p-2.5 h-12;
+}
+.basic-textarea {
+    @apply bg-transparent border border-gray-300 text-white text-sm rounded-sm block w-full p-2.5;
+}
+
+
+.footer-section {
+    .copyright-text {
+        @apply text-[#999999] pt-8 pb-20 lg:pt-12 font-medium;
+    }
+}
+
+
+
+.modal-overlay {
+    @apply fixed inset-0 bg-[rgba(0,0,0,0.85)] flex justify-center items-center z-[999];
+    .modal-content.swiper-modal {
+        @apply relative max-w-[90%] max-h-[90%] p-4 rounded-lg;
+    }
+    .swiper-modal .swiper-zoom-container img {
+        @apply max-w-full max-h-[80vh] object-contain mx-auto block;
+    }
+    .close-btn {
+        @apply absolute -top-[30px] lg:top-[10px] right-0 lg:right-[15px] text-[32px] md:text-5xl bg-none border-0 text-white cursor-pointer z-10;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        @apply hidden md:flex text-white;
+    }
+}
+
+
