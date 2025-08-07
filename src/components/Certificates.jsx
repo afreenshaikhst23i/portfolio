@@ -119,14 +119,14 @@ function  Certificates() {
             <div className="certificate-wrap">
                 <ul className="certificate-list">
                     {certificates.map((cert, index) => (
-                        <li className="certificates" key={index} onClick={() => openModal(index)}>
-                            <a href="#">
+                        <li className="certificates" key={index}>
+                            <button className='crt-btn' type="button" onClick={() => openModal(index)}> 
                                 <img src={cert.image} alt="{cert.title}" />
                                 <div>
                                     <p className="text-gray-400 font-bold">{cert.source}</p>
                                     <p>{cert.title}</p>
                                 </div>
-                            </a>
+                            </button>
                         </li>
                     ))}
                 </ul>

@@ -67,7 +67,7 @@ main, footer {
         @apply w-5 h-5 translate-y-[2px] transition-all duration-300;
     }
 }
-.link:hover svg  {
+.link:hover svg, .link:focus svg  {
     @apply -translate-y-[2px];
 }
 
@@ -95,9 +95,6 @@ main, footer {
             @apply self-center text-[55px] font-semibold whitespace-nowrap inline-block text-white font-sacramento;
         }
     }
-    .toggle-menu {
-        @apply lg:order-2 inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 ;
-    }
     .menu-main {
         @apply hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1;
     }
@@ -113,10 +110,10 @@ main, footer {
                 @apply block transition-all duration-400;
             }
         }
-        .menu-item.active, .menu-item:hover {
+        .menu-item.active, .menu-item:hover, .menu-item:focus {
             @apply opacity-100;
         }
-        .menu-item.active .nav-indicator, .menu-item:hover .nav-indicator {
+        .menu-item.active .nav-indicator, .menu-item:hover .nav-indicator, .menu-item:focus .nav-indicator {
             @apply w-20;
         }
     }
@@ -124,9 +121,12 @@ main, footer {
 
 .social-icon-list {
     @apply flex flex-row gap-6 mt-8;
+    .social-icon-item:hover .social-icon-link, .social-icon-item:focus .social-icon-link {
+        @apply -translate-y-[5px];
+    }
     .social-icon-link {
-        @apply w-8 h-8 flex justify-center items-center bg-gray-400 rounded-md p-[2px]
-        hover:bg-gray-300;
+        @apply w-8 h-8 flex justify-center items-center bg-white rounded-md p-[2px]
+        opacity-50 hover:opacity-90 focus:opacity-90 transition-all duration-300;
     }
 }
 
@@ -160,30 +160,6 @@ main, footer {
     }
 }
 
-/* Animation */
-.anim-typewriter{
-    animation: typewriter 2s steps(44) 1s 1 normal both,
-               blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 335px;}
-}
-@media only screen and (max-width: 1023px) {
-    @keyframes typewriter{
-        from{width: 0;}
-        to{width: 175px;}
-    }
-}
-@keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
-}
-
-
-.connect-link {
-    @apply flex flex-row gap-2 items-center text-lg text-primary;
-}
 .heading-wrapper {
     @apply relative mb-10 lg:mb-14 text-left;
     .primary-heading {
@@ -197,7 +173,6 @@ main, footer {
         @apply text-xl text-[#999999] mt-[15px] lg:mt-[40px];
     }
 }
-
 
 .skills-section {
     @apply text-center;
@@ -275,9 +250,12 @@ main, footer {
         .certificate-list {
             @apply flex flex-col gap-4;
             .certificates {
-                & a {
-                    @apply flex flex-row gap-4 items-center p-4 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,.1)]
-                    hover:bg-[rgb(36,43,55,0.5)] hover:rounded-md transition-all duration-300;
+                .crt-btn {
+                    @apply flex flex-row gap-4 items-center p-4 w-full text-left
+                    hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,.1)]
+                    focus:shadow-[inset_0_1px_0_0_rgba(148,163,184,.1)]
+                    hover:bg-[rgb(36,43,55,0.5)] hover:rounded-md transition-all duration-300
+                    focus:bg-[rgb(36,43,55,0.5)] focus:rounded-md;
                 }
                 & p {
                     @apply transition-all duration-300;
@@ -290,36 +268,11 @@ main, footer {
     }
 }
 
-.contact-section {
-    .primary-heading {
-        @apply mb-4;
-    }
-    .contact-detail-wrap {
-        @apply basis-1/2;
-        & img {
-            @apply w-full h-full object-cover;
-        }
-    }
-}
-
-.basic-lable {
-    @apply block mb-2 text-sm font-medium text-white text-left;
-}
-.basic-input {
-    @apply bg-transparent border border-gray-300 text-white text-sm rounded-sm block w-full p-2.5 h-12;
-}
-.basic-textarea {
-    @apply bg-transparent border border-gray-300 text-white text-sm rounded-sm block w-full p-2.5;
-}
-
-
 .footer-section {
     .copyright-text {
         @apply text-[#999999] pt-8 pb-20 lg:pt-12 font-medium;
     }
 }
-
-
 
 .modal-overlay {
     @apply fixed inset-0 bg-[rgba(0,0,0,0.85)] flex justify-center items-center z-[999];

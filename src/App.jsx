@@ -20,7 +20,6 @@ function App() {
                 <Skills />
                 <Projects />
                 <Certificates />
-                <Contact />
                 <Footer />
             </main>
         </div>

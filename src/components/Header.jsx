@@ -8,8 +8,7 @@ const navItems = [
     { href:  "#about", title: "About" },
     { href:  "#skills", title: "Skills"},
     { href:  "#projects", title: "Projects"},
-    { href:  "#certificate", title: "Certifications"},
-    { href:  "#contact", title: "Contact"}
+    { href:  "#certificate", title: "Certifications"}
 ]
 
 const socialLinks = [
