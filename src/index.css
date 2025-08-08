@@ -160,9 +160,9 @@ main, footer {
 }
 
 .heading-wrapper {
-    @apply relative mb-10 lg:mb-14 text-left;
+    @apply relative mb-14 text-left;
     .primary-heading {
-        @apply text-[30px] lg:text-[45px] font-bold;
+        @apply text-4xl lg:text-[45px] font-bold;
     }
     .primary-heading-shadow {
         @apply absolute left-1/2 -translate-x-1/2 top-[25px] lg:top-[40px] text-[#ffffff17] 
@@ -204,8 +204,9 @@ main, footer {
         @apply mb-4;
     }
     .projects-wrap {
+        @apply pt-7;
         .projects-slider {
-            @apply flex flex-col gap-10 lg:gap-40;
+            @apply flex flex-col gap-24 lg:gap-40;
         }
         li {
             figure {
@@ -218,7 +219,7 @@ main, footer {
                 @apply absolute -bottom-10 w-[80%] p-4 text-left bg-primary rounded-sm 
                 shadow-[0_0_10px_0_#2d3a50];
                 .fig-name {
-                    @apply font-bold text-2xl;
+                    @apply font-bold text-xl lg:text-2xl;
                 }
                 .fig-text {
                     @apply mt-2;
