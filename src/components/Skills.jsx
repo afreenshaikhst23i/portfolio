@@ -53,13 +53,13 @@ const skillCategories  = [
 function Skills() {
     return (
         <section className="skills-section" id="skills">
-            <div className="heading-wrapper">
+            <div className="heading-wrapper scroll-reveal scroll-reveal-bottom">
                 <h2 className="primary-heading">My Skills</h2>
                 <span className="primary-heading-shadow" aria-hidden="true">My Skills</span>
             </div>
             <div className="skills-wrap">
                 {skillCategories.map((category, index) => (
-                    <div className="skills-grid" key={index}> 
+                    <div className="skills-grid scroll-reveal scroll-reveal-bottom" key={index}> 
                         <div className="skills-header">
                             <h3>{category.title}</h3>
                         </div>

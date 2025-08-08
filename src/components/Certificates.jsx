@@ -60,14 +60,12 @@ function  Certificates() {
 
     const closeModal = () => setIsOpen(false);
 
-    // Escape key & focus trap
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
                 closeModal();
             }
 
-            // Focus trap
             if (e.key === 'Tab' && isOpen) {
                 const modal = document.querySelector('.modal-content');
                 const focusableElements = modal.querySelectorAll(
@@ -95,7 +93,6 @@ function  Certificates() {
         if (isOpen) {
             document.addEventListener('keydown', handleKeyDown);
 
-            // Auto focus first focusable element
             setTimeout(() => {
                 const modal = document.querySelector('.modal-content');
                 const focusable = modal.querySelector(
@@ -112,14 +109,14 @@ function  Certificates() {
 
     return (
         <section className="certificate-section" id="certificate">
-            <div className="heading-wrapper">
+            <div className="heading-wrapper scroll-reveal scroll-reveal-bottom">
                 <h2 className="primary-heading">Certifications</h2>
                 <span className="primary-heading-shadow" aria-hidden="true">Certifications</span>
             </div>
             <div className="certificate-wrap">
                 <ul className="certificate-list">
                     {certificates.map((cert, index) => (
-                        <li className="certificates" key={index}>
+                        <li className="certificates scroll-reveal scroll-reveal-right" key={index}>
                             <button className='crt-btn' type="button" onClick={() => openModal(index)}> 
                                 <img src={cert.image} alt="{cert.title}" />
                                 <div>

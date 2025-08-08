@@ -1,6 +1,6 @@
 function Contact() {
     return (
-        <section class="contact-section" id="contact">
+        <section class="contact-section scroll-reveal scroll-reveal-bottom" id="contact">
             <div class="heading-wrapper">
                 <h2 class="primary-heading">Contact Me</h2>
                 <span class="primary-heading-shadow" aria-hidden="true">Contact Me</span>

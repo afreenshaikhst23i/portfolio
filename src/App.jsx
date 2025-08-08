@@ -3,8 +3,8 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Certificates from "./components/Certificates";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import useScrollReveal from "./animation/ScrollReveal";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -12,6 +12,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 
 function App() {
+    useScrollReveal();
     return (
         <div className="page-wrapper">
             <Header />

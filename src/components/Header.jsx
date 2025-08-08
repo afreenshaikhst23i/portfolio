@@ -59,13 +59,13 @@ function Header() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // trigger on load
+        handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
-        <header className="header-main">
+        <header className="header-main scroll-reveal scroll-reveal-bottom">
             <div className="nav-wrapper">
                 <div className="logo-name-wrapper">
                     <h1 className="logo-name">

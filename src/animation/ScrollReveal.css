@@ -1,0 +1,41 @@
+.scroll-reveal {
+  opacity: 0;
+}
+
+.scroll-reveal-bottom {
+  transform: translateY(40px);
+}
+
+.scroll-reveal-bottom.visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-reveal-right {
+  transform: translateX(40px);
+}
+
+.scroll-reveal-right.visible {
+  animation: fadeInRight 0.6s ease forwards;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

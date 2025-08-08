@@ -8,7 +8,7 @@ const projects = [
         img: goodluckScreen,
         name: 'Good Luck Digital Photo Studio',
         description: 'Designed and developed a portfolio website for a photo studio to professionally showcase their photography and services.',
-        tech: 'html5 , tailwind CSS',
+        tech: 'html5 , tailwind CSS , JavaScript',
         github: 'https://github.com/afreenshaikhst23i/goodluck-2024',
         live: 'https://goodluckdps.com/',
     },
@@ -25,16 +25,18 @@ const projects = [
 function Projects() {
     return (
         <section className="Projects-section" id="projects">
-            <div className="heading-wrapper">
+            <div className="heading-wrapper scroll-reveal scroll-reveal-bottom">
                 <h2 className="primary-heading">Projects</h2>
                 <span className="primary-heading-shadow" aria-hidden="true">Projects</span>
             </div>
             <div className="projects-wrap">
-                <ul className="projects-slider">
+                <div className="projects-main">
                     {projects.map((project, index) => (
-                        <li key={index} className={index % 2 === 0 ? 'flow-right' : 'flow-left'}>
+                        <div key={index} className={`projects-card scroll-reveal scroll-reveal-bottom ${index % 2 === 0 ? 'flow-right' : 'flow-left'}`}>
                             <figure>
-                                <img className="project-thumb" src={project.img} alt={project.name} />
+                                <a href={project.live} className='project-thumb' target="_blank" rel="noopener noreferrer">
+                                    <img src={project.img} alt={project.name} />
+                                </a>
                                 <figcaption>
                                     <h2 className="fig-name">{project.name}</h2>
                                     <p className="fig-text">{project.description}</p>
@@ -61,9 +63,9 @@ function Projects() {
                                     </div>
                                 </figcaption>
                             </figure>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </div>
         </section>
     );
