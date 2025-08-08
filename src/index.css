@@ -6,8 +6,9 @@
     --font-sacramento: sacramento, cursive;
     --font-body: Figtree, ui-sans-serif, system-ui;
 
-    --color-primary: #2D3A50;
+    --color-primary: #0f172a;
     --color-secondary: #999999;
+    --color-tertiary: #2D3A50;
 
     --breakpoint-sm: 40rem; 
     --breakpoint-md: 48rem; 
@@ -48,7 +49,7 @@ html {
 }
 
 body {
-    @apply bg-[#0f172a] text-white relative scroll-smooth font-body font-[300];
+    @apply bg-primary text-white relative scroll-smooth font-body font-[300];
 }
 .wave {
     @apply absolute bottom-0 w-full z-[8];
@@ -144,9 +145,6 @@ main, footer {
         .hero-text-wrap {
             @apply basis-full lg:basis-[50%] grow flex flex-col justify-center gap-2 lg:gap-4 text-center 
             lg:text-left items-center lg:items-start;
-            .hey-text {
-                @apply text-primary text-3xl font-bold;
-            }
             .hero-heading {
                 @apply text-3xl lg:text-6xl font-bold whitespace-nowrap overflow-hidden inline-block;
                 border-right: 2px solid rgba(255,255,255,.75);
@@ -207,19 +205,17 @@ main, footer {
     }
     .projects-wrap {
         .projects-slider {
-            @apply flex flex-col gap-36;
+            @apply flex flex-col gap-10 lg:gap-40;
         }
         li {
             figure {
-                @apply flex flex-col items-center relative py-10
-                before:content-[""] before:border-[10px] before:border-primary before:absolute
-                before:inset-[0_10%] before:-z-[1];
+                @apply flex flex-col relative h-[400px];
                 .project-thumb {
-                    @apply w-full object-contain object-top shadow-[0_0_10px_0_#2d3a50];
+                    @apply relative w-[85%] h-full object-cover object-top shadow-[0_0_10px_0_#2d3a50];
                 }
             }
             figcaption {
-                @apply absolute -bottom-[50px] w-[70%] p-4 text-left bg-[#0f172a] mx-auto rounded-sm 
+                @apply absolute -bottom-10 w-[80%] p-4 text-left bg-primary rounded-sm 
                 shadow-[0_0_10px_0_#2d3a50];
                 .fig-name {
                     @apply font-bold text-2xl;
@@ -228,8 +224,27 @@ main, footer {
                     @apply mt-2;
                 }
                 .fig-link {
-                    @apply underline text-white mt-4 block;
+                    @apply mt-4 block transition-all duration-300;
                 }
+                .fig-link:hover, .fig-link:focus {
+                    @apply -translate-y-[5px];
+                }
+            }
+        }
+        .flow-right {
+            figure {
+                @apply items-end;
+            }
+            figcaption {
+                @apply left-0;
+            }
+        }
+        .flow-left {
+            figure {
+                @apply items-start;
+            }
+            figcaption {
+                @apply right-0;
             }
         }
     }

@@ -3,6 +3,25 @@ import portfolioScreen from '../assets/images/projects/portfolio.png'
 import githubWhiteIcon from '../assets/images/github-white.svg'
 import eLinkWhiteIcon from '../assets/images/external-link-white.svg'
 
+const projects = [
+    {
+        img: goodluckScreen,
+        name: 'Good Luck Digital Photo Studio',
+        description: 'Designed and developed a portfolio website for a photo studio to professionally showcase their photography and services.',
+        tech: 'html5 , tailwind CSS',
+        github: 'https://github.com/afreenshaikhst23i/goodluck-2024',
+        live: 'https://goodluckdps.com/',
+    },
+    {
+        img: portfolioScreen,
+        name: 'My Portfolio Website',
+        description: 'Loosely designed in VS Code and fully hand-coded using Tailwind CSS. Deployed via GitHub Pages.',
+        tech: 'React.js , vite , tailwind CSS , github pages',
+        github: 'https://github.com/afreenshaikhst23i/portfolio',
+        live: 'https://afreenshaikhst23i.github.io/portfolio/',
+    },
+];
+
 function Projects() {
     return (
         <section className="Projects-section" id="projects">
@@ -12,42 +31,38 @@ function Projects() {
             </div>
             <div className="projects-wrap">
                 <ul className="projects-slider">
-                    <li>
-                        <figure>
-                            <img className="project-thumb" src={goodluckScreen} alt="" />
-                            <figcaption>
-                                <h2 className="fig-name">Good Luck Digital Photo Studio</h2>
-                                <p className="fig-text">Designed and developed a portfolio website for a photo studio to professionally showcase their photography and services.</p>
-                                <p className="mt-4 text-secondary">html5 , tailwind CSS</p>
-                                <div className='flex flex-row gap-4 items-center'>
-                                    <a className="fig-link" href="https://github.com/afreenshaikhst23i/goodluck-2024" target="_blank">
-                                        <img className="w-6 h-6" src={githubWhiteIcon} alt="" />
-                                    </a>
-                                    <a className="fig-link" href="https://goodluckdps.com/" target="_blank">
-                                        <img className="w-6 h-6" src={eLinkWhiteIcon} alt="" />
-                                    </a>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <img className="project-thumb" src={portfolioScreen} alt="" />
-                            <figcaption>
-                                <h2 className="fig-name">My Portfolio Website</h2>
-                                <p className="fig-text">Loosely designed in VS Code and fully hand-coded using Tailwind CSS. Deployed via GitHub Pages.</p>
-                                <p className="mt-4 text-secondary">React.js , vite , tailwind CSS , github pages</p>
-                                <div className='flex flex-row gap-4 items-center'>
-                                    <a className="fig-link" href="https://github.com/afreenshaikhst23i/portfolio" target="_blank">
-                                        <img className="w-6 h-6" src={githubWhiteIcon} alt="" />
-                                    </a>
-                                    <a className="fig-link" href="https://afreenshaikhst23i.github.io/portfolio/" target="_blank">
-                                        <img className="w-6 h-6" src={eLinkWhiteIcon} alt="" />
-                                    </a>
-                                </div>
-                            </figcaption>
-                        </figure>
-                    </li>
+                    {projects.map((project, index) => (
+                        <li key={index} className={index % 2 === 0 ? 'flow-right' : 'flow-left'}>
+                            <figure>
+                                <img className="project-thumb" src={project.img} alt={project.name} />
+                                <figcaption>
+                                    <h2 className="fig-name">{project.name}</h2>
+                                    <p className="fig-text">{project.description}</p>
+                                    <p className="mt-4 text-secondary">{project.tech}</p>
+                                    <div className="flex flex-row gap-4 items-center">
+                                        <a
+                                            className="fig-link"
+                                            href={project.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="GitHub"
+                                        >
+                                            <img className="w-6 h-6" src={githubWhiteIcon} alt="GitHub" />
+                                        </a>
+                                        <a
+                                            className="fig-link"
+                                            href={project.live}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            title="External Link"
+                                        >
+                                            <img className="w-6 h-6" src={eLinkWhiteIcon} alt="External Link" />
+                                        </a>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>
