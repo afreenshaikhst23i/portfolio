@@ -22,7 +22,7 @@
 }
 
 .scroll-reveal-right {
-  transform: translateX(40px);
+  transform: translateX(16px);
 }
 
 .scroll-reveal-right.visible {
