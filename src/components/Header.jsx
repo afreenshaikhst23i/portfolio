@@ -65,7 +65,7 @@ function Header() {
     }, []);
 
     return (
-        <header className="header-main scroll-reveal scroll-reveal-bottom">
+        <header className="header-main">
             <div className="nav-wrapper">
                 <div className="logo-name-wrapper">
                     <h1 className="logo-name">
