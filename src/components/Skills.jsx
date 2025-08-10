@@ -17,35 +17,35 @@ const skillCategories  = [
     {
         title: "Languages",
         skills: [
-            { name: "HTML5", icon: html5Icon },
-            { name: "CSS3", icon: css3Icon },
-            { name: "JavaScript", icon: javascriptIcon },
-            { name: "TypeScript", icon: typescriptIcon },
+            { name: "HTML5", icon: html5Icon, width: 48, height: 48 },
+            { name: "CSS3", icon: css3Icon, width: 48, height: 48 },
+            { name: "JavaScript", icon: javascriptIcon, width: 48, height: 48 },
+            { name: "TypeScript", icon: typescriptIcon, width: 48, height: 48 },
         ]
     },
     {
         title: "Frontend",
         skills: [
-            { name: "React.js", icon: reactIcon },
-            { name: "Redux Toolkit", icon: reduxIcon },
+            { name: "React.js", icon: reactIcon, width: 48, height: 48 },
+            { name: "Redux Toolkit", icon: reduxIcon, width: 48, height: 48 },
         ]
     },
     {
         title: "Styling & UI",
         skills: [
-            { name: "Tailwind CSS", icon: tailwindIcon },
-            { name: "Bootstrap", icon: bootstrapIcon },
-            { name: "Sass", icon: sassIcon },
-            { name: "Material-UI", icon: materialIcon },
+            { name: "Tailwind CSS", icon: tailwindIcon, width: 48, height: 48 },
+            { name: "Bootstrap", icon: bootstrapIcon, width: 48, height: 48 },
+            { name: "Sass", icon: sassIcon, width: 48, height: 48 },
+            { name: "Material-UI", icon: materialIcon, width: 48, height: 48 },
         ]
     },
     {
         title: "Tools & Workflow",
         skills: [
-            { name: "Git", icon: gitIcon },
-            { name: "GitHub", icon: githubIcon },
-            { name: "VS Code", icon: vsCodeIcon },
-            { name: "Vite", icon: vite },
+            { name: "Git", icon: gitIcon, width: 48, height: 48 },
+            { name: "GitHub", icon: githubIcon, width: 48, height: 48 },
+            { name: "VS Code", icon: vsCodeIcon, width: 48, height: 48 },
+            { name: "Vite", icon: vite, width: 48, height: 48 },
         ]
     }
 ]
@@ -66,7 +66,7 @@ function Skills() {
                         <div className="skills-list">
                             {category.skills.map((skill, i) => (
                             <div key={i}>
-                                <img src={skill.icon} alt={skill.name} />
+                                <img src={skill.icon} alt={skill.name} width={skill.width} height={skill.height} />
                                 <span>{skill.name}</span>
                             </div>
                         ))}

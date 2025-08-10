@@ -110,7 +110,7 @@ function  Certificates() {
     return (
         <section className="certificate-section" id="certificate">
             <div className="heading-wrapper scroll-reveal scroll-reveal-bottom">
-                <h2 className="primary-heading">Certifications</h2>
+                <h2 className="primary-heading mt-10 lg:mt-0">Certifications</h2>
                 <span className="primary-heading-shadow" aria-hidden="true">Certifications</span>
             </div>
             <div className="certificate-wrap">

@@ -16,21 +16,25 @@ const socialLinks = [
     href: "mailto:shaikhafreenst23i@gmail.com",
     title: "Email",
     icon: mailIcon,
+    width: 24, height: 24,
   },
   {
     href: "https://www.linkedin.com/in/afreen-zuber-shaikh",
     title: "LinkedIn",
     icon: linkedinIcon,
+    width: 22, height: 22,
   },
   {
     href: "https://github.com/afreenshaikhst23i",
     title: "GitHub",
     icon: githubIcon,
+    width: 24, height: 24,
   },
   {
     href: "/afreen-shaikh-resume.pdf",
     title: "Resume",
     icon: resumeIcon,
+    width: 26, height: 26,
   },
 ];
 
@@ -66,6 +70,7 @@ function Header() {
 
     return (
         <header className="header-main">
+            <a className="skip-main" href="#about">Skip to Content</a>
             <div className="nav-wrapper">
                 <div className="logo-name-wrapper">
                     <h1 className="logo-name">
@@ -104,7 +109,7 @@ function Header() {
                         className="social-icon-link"
                         title={item.title}
                     >
-                        <img src={item.icon} alt={item.title} />
+                        <img src={item.icon} alt={item.title} width={item.width} height={item.height} />
                     </a>
                     </li>
                 ))}

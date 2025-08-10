@@ -11,6 +11,7 @@ const projects = [
         tech: 'html5 , tailwind CSS , JavaScript',
         github: 'https://github.com/afreenshaikhst23i/goodluck-2024',
         live: 'https://goodluckdps.com/',
+        width: 507, height: 400,
     },
     {
         img: portfolioScreen,
@@ -19,6 +20,7 @@ const projects = [
         tech: 'React.js , vite , tailwind CSS , github pages',
         github: 'https://github.com/afreenshaikhst23i/portfolio',
         live: 'https://afreenshaikhst23i.github.io/portfolio/',
+        width: 507, height: 400,
     },
 ];
 
@@ -35,7 +37,7 @@ function Projects() {
                         <div key={index} className={`projects-card scroll-reveal scroll-reveal-bottom ${index % 2 === 0 ? 'flow-right' : 'flow-left'}`}>
                             <figure>
                                 <a href={project.live} className='project-thumb' target="_blank" rel="noopener noreferrer">
-                                    <img src={project.img} alt={project.name} />
+                                    <img src={project.img} alt={project.name} width={project.width} height={project.height} />
                                 </a>
                                 <figcaption>
                                     <h2 className="fig-name">{project.name}</h2>
