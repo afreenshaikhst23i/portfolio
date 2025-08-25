@@ -5,21 +5,21 @@ import eLinkWhiteIcon from '../assets/images/external-link-white.svg'
 
 const projects = [
     {
+        img: goodluckScreen,
+        name: 'Good Luck Digital Photo Studio',
+        description: 'Designed and developed a portfolio website for a photo studio to professionally showcase their photography and services.',
+        tech: 'Next.js, Tailwind CSS, JavaScript, HTML5, Vercel',
+        github: 'https://github.com/afreenshaikhst23i/good-luck',
+        live: 'https://goodluckdps.com/',
+        width: 507, height: 400,
+    },
+    {
         img: portfolioScreen,
         name: 'My Portfolio Website',
         description: 'Loosely designed in VS Code and fully hand-coded using Tailwind CSS. Deployed via GitHub Pages.',
         tech: 'React.js (with Vite) , Tailwind CSS , GitHub pages',
         github: 'https://github.com/afreenshaikhst23i/portfolio',
         live: 'https://afreenshaikhst23i.github.io/portfolio/',
-        width: 507, height: 400,
-    },
-    {
-        img: goodluckScreen,
-        name: 'Good Luck Digital Photo Studio',
-        description: 'Designed and developed a portfolio website for a photo studio to professionally showcase their photography and services.',
-        tech: 'HTML5 , Tailwind CSS , JavaScript',
-        github: 'https://github.com/afreenshaikhst23i/goodluck-2024',
-        live: 'https://goodluckdps.com/',
         width: 507, height: 400,
     },
 ];
