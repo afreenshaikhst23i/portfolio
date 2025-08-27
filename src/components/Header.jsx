@@ -31,7 +31,7 @@ const socialLinks = [
     width: 24, height: 24,
   },
   {
-    href: `${import.meta.env.BASE_URL}afreen-shaikh-resume.pdf`,
+    href: `${import.meta.env.BASE_URL}afreen-z-shaikh-resume.pdf`,
     title: "Resume",
     icon: resumeIcon,
     width: 26, height: 26,
