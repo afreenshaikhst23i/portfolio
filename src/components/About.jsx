@@ -6,9 +6,9 @@ function About() {
                 <span className="primary-heading-shadow" aria-hidden="true">About Me</span>
             </div>
             <div className="about-main">
-                <p className="mb-4">I’m a front-end developer with 7+ years of experience, passionate about building responsive, accessible web applications. I specialize in React.js with hands-on expertise in TypeScript, Tailwind CSS, Redux Toolkit, and modern JavaScript. My approach blends clean code with thoughtful UI development for consistent, high-performance results.</p>
-                <p className="mb-4">I’ve worked on diverse projects — from enterprise platforms to lightweight digital tools — creating reusable components, integrating APIs, and solving front-end challenges. With a strong foundation in HTML, CSS, and JavaScript (ES6+), I follow best practices in performance, accessibility, and version control.</p>
-                <p>Outside of work, I stay sharp through courses, personal builds, and exploring new frameworks to stay current in the fast-evolving front-end space.</p>
+                <p className="mb-4">I’m a UI/Frontend Developer with 7+ years of experience creating responsive, accessible, and pixel-perfect user interfaces. My core strengths lie in HTML, CSS, and modern UI development, ensuring designs translate into clean, consistent, and high-performance web experiences.</p>
+                <p className="mb-4">I have hands-on exposure to React.js and Next.js through UI-focused POCs and personal projects, where I built reusable components, implemented responsive layouts, and explored component-based development patterns. I enjoy working with tools like Tailwind CSS to streamline styling and maintain visual consistency across pages.</p>
+                <p>Outside of work, I continue improving my skills by experimenting with new UI techniques, refining React/Next.js fundamentals, and building small personal projects to stay aligned with modern frontend trends.</p>
                 <div className="cta-wrapper pt-6 inline-block">
                     <a href={`${import.meta.env.BASE_URL}afreen-z-shaikh-resume.pdf`} target="_blank" rel="noopener noreferrer" className="link">
                         View Full Resume

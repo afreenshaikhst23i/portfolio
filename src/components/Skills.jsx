@@ -1,9 +1,8 @@
 import html5Icon from '../assets/images/skills/html5.svg';
 import css3Icon from '../assets/images/skills/css3.svg';
-import javascriptIcon from '../assets/images/skills/javascript.svg';    
-import typescriptIcon from '../assets/images/skills/typescript.svg';    
-import reactIcon from '../assets/images/skills/react.svg';    
-import reduxIcon from '../assets/images/skills/redux.svg';    
+import javascriptIcon from '../assets/images/skills/javascript.svg';     
+import reactIcon from '../assets/images/skills/react.svg';     
+import nextIcon from '../assets/images/skills/next.svg';     
 import tailwindIcon from '../assets/images/skills/tailwind-css.svg';    
 import bootstrapIcon from '../assets/images/skills/bootstrap.svg';    
 import sassIcon from '../assets/images/skills/sass.svg';    
@@ -20,14 +19,13 @@ const skillCategories  = [
             { name: "HTML5", icon: html5Icon, width: 48, height: 48 },
             { name: "CSS3", icon: css3Icon, width: 48, height: 48 },
             { name: "JavaScript", icon: javascriptIcon, width: 48, height: 48 },
-            { name: "TypeScript", icon: typescriptIcon, width: 48, height: 48 },
         ]
     },
     {
         title: "Frontend",
         skills: [
             { name: "React.js", icon: reactIcon, width: 48, height: 48 },
-            { name: "Redux Toolkit", icon: reduxIcon, width: 48, height: 48 },
+            { name: "Next.js", icon: nextIcon, width: 48, height: 48 },
         ]
     },
     {
