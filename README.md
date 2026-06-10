@@ -10,3 +10,20 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+
+
+To run css:
+npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch
+
+To run Project:
+npm run dev
+
+To commit code to github:
+git add .
+git commit -m "Made updates to portfolio"
+git push origin main/master
+
+To deploy on github:
+npm run deploy
